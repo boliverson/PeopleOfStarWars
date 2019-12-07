@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PeopleOfStarWars.swift
 //  PeopleOfStarWars
 //
 //  Created by Ben Oliverson on 12/7/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PeopleOfStarWars: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
