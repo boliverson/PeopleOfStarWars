@@ -22,6 +22,8 @@
 		9A135EF7239C1E4500B137CE /* Individual+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A135EF5239C1E4500B137CE /* Individual+CoreDataProperties.swift */; };
 		9A135EFA239C1FDC00B137CE /* fa-regular-400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A135EF9239C1FDC00B137CE /* fa-regular-400.ttf */; };
 		9A561DF8239C44B200F6623D /* IndividualDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A561DF7239C44B200F6623D /* IndividualDetail.swift */; };
+		9A561DFB239C501D00F6623D /* DownloadBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A561DFA239C501D00F6623D /* DownloadBase.swift */; };
+		9A561DFD239C509400F6623D /* DownloadIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A561DFC239C509400F6623D /* DownloadIndividual.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		9A135EF5239C1E4500B137CE /* Individual+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Individual+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9A135EF9239C1FDC00B137CE /* fa-regular-400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-regular-400.ttf"; sourceTree = "<group>"; };
 		9A561DF7239C44B200F6623D /* IndividualDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualDetail.swift; sourceTree = "<group>"; };
+		9A561DFA239C501D00F6623D /* DownloadBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadBase.swift; sourceTree = "<group>"; };
+		9A561DFC239C509400F6623D /* DownloadIndividual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadIndividual.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 		9A135EB9239C113F00B137CE /* PeopleOfStarWars */ = {
 			isa = PBXGroup;
 			children = (
+				9A561DF9239C4C6C00F6623D /* Sync */,
 				9A135EF8239C1FB800B137CE /* Resources */,
 				9A135EF3239C1DD400B137CE /* Entities */,
 				9A135EF0239C1AD000B137CE /* MainList */,
@@ -187,6 +192,15 @@
 				9A561DF7239C44B200F6623D /* IndividualDetail.swift */,
 			);
 			path = IndividualDetail;
+			sourceTree = "<group>";
+		};
+		9A561DF9239C4C6C00F6623D /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				9A561DFA239C501D00F6623D /* DownloadBase.swift */,
+				9A561DFC239C509400F6623D /* DownloadIndividual.swift */,
+			);
+			path = Sync;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,9 +340,11 @@
 				9A135EBB239C113F00B137CE /* AppDelegate.swift in Sources */,
 				9A135EF6239C1E4500B137CE /* Individual+CoreDataClass.swift in Sources */,
 				9A135EF7239C1E4500B137CE /* Individual+CoreDataProperties.swift in Sources */,
+				9A561DFD239C509400F6623D /* DownloadIndividual.swift in Sources */,
 				9A135EC5239C113F00B137CE /* PeopleOfStarWars.xcdatamodeld in Sources */,
 				9A561DF8239C44B200F6623D /* IndividualDetail.swift in Sources */,
 				9A135EBD239C113F00B137CE /* SceneDelegate.swift in Sources */,
+				9A561DFB239C501D00F6623D /* DownloadBase.swift in Sources */,
 				9A135EF2239C1B1700B137CE /* IndividualQuickView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

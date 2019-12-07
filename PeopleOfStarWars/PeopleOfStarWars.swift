@@ -9,10 +9,12 @@
 import UIKit
 
 class PeopleOfStarWars: UIViewController {
-
+    
+    let downloadIndividuals = DownloadIndividual()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        downloadIndividuals.downloadAction()
     }
 
 

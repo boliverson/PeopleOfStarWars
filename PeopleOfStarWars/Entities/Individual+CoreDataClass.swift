@@ -13,4 +13,8 @@ import CoreData
 @objc(Individual)
 public class Individual: NSManagedObject {
 
+    func getIndividualWithId(id: Int16) -> Individual?{
+        return nil
+    }
+    
 }
