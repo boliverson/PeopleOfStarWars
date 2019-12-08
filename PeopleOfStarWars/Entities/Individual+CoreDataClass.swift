@@ -13,8 +13,12 @@ import CoreData
 @objc(Individual)
 public class Individual: NSManagedObject {
 
-    func getIndividualWithId(id: Int16) -> Individual?{
-        return nil
+    class func getIndividualWithId(id: Int16) -> Individual?{
+        
+        guard let individual = EntityInteractor.getEntityWithId(entityName: String(describing: self), entityId: id) as? Individual else {
+            return nil
+        }
+        return individual
     }
     
 }
