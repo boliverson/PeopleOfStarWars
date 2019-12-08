@@ -20,7 +20,24 @@ class IndividualQuickView: UITableViewCell {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         do{
             let individual = try context.existingObject(with: individualId) as! Individual
+            
             self.nameLabel.text = "\(individual.firstName ?? "Ben") \(individual.lastName ?? "Oliverson")"
+            self.affiliationLabel.text = Affiliation(rawValue: Int(individual.affiliation))?.string
+            
+            self.affiliationIcon.font = UIFont(name: "FontAwesome", size: 45.0)
+            
+            switch individual.affiliation {
+            case 0:
+                self.affiliationIcon.text = "" //Rebelion
+            case 1:
+                self.affiliationIcon.text = "" //First Order
+            case 2:
+                self.affiliationIcon.text = "" //Jedi
+            case 3:
+                self.affiliationIcon.text = "" //Sith
+            default:
+                self.affiliationIcon.text = "¯\\_(ツ)_/¯"
+            }
         } catch {
             print("Error trying to fetch individual")
         }

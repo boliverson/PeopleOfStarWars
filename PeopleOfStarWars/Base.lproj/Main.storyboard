@@ -10,7 +10,7 @@
         <!--Individual Detail-->
         <scene sceneID="IT0-kE-Vp7">
             <objects>
-                <viewController id="IFA-op-tKx" customClass="IndividualDetail" customModule="PeopleOfStarWars" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IndividualDetail" id="IFA-op-tKx" customClass="IndividualDetail" customModule="PeopleOfStarWars" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dfq-SN-Myr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,7 +137,7 @@
             </objects>
             <point key="canvasLocation" x="-533" y="138"/>
         </scene>
-        <!--People Of Star Wars-->
+        <!--People of Star Wars-->
         <scene sceneID="ogW-7P-Osv">
             <objects>
                 <viewController id="ae1-ms-iHn" customClass="PeopleOfStarWars" customModule="PeopleOfStarWars" customModuleProvider="target" sceneMemberID="viewController">
@@ -149,8 +149,9 @@
                                 <rect key="frame" x="0.0" y="132" width="414" height="730"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="yv0-UC-v1H" customClass="IndividualQuickView" customModule="PeopleOfStarWars" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="IndividualQuickView" id="yv0-UC-v1H" customClass="IndividualQuickView" customModule="PeopleOfStarWars" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yv0-UC-v1H" id="tPZ-0C-Dka">
@@ -159,19 +160,34 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ae1-ms-iHn" id="6gQ-GV-tG8"/>
+                                    <outlet property="delegate" destination="ae1-ms-iHn" id="mSo-yp-XRV"/>
+                                </connections>
                             </tableView>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2h-ww-qOC">
                                 <rect key="frame" x="0.0" y="88" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ae1-ms-iHn" id="S54-CM-4wb"/>
+                                </connections>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="eua-av-pdO"/>
                     </view>
-                    <navigationItem key="navigationItem" id="28h-qN-FiE">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="GPl-0a-Wy9"/>
+                    <navigationItem key="navigationItem" title="People of Star Wars" id="28h-qN-FiE">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="GPl-0a-Wy9">
+                            <connections>
+                                <action selector="didSelectSort:" destination="ae1-ms-iHn" id="wvR-XC-VgS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="c2h-ww-qOC" id="wyU-9y-C3h"/>
+                        <outlet property="tableview" destination="RvX-po-Khe" id="T31-Fq-V26"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qK4-OT-xnx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

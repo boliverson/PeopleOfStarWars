@@ -19,8 +19,26 @@ class IndividualDetail: UIViewController {
     @IBOutlet var birthdateLabel: UILabel!
     @IBOutlet var affiliationTextLabel: UILabel!
     @IBOutlet var hasForceLabel: UILabel!
+    var selectedIndividual: Individual!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.setUpUI()
+    }
+    
+    func setUpUI() {
+        firstNameLabel.text = selectedIndividual.firstName
+        lastNameLabel.text = selectedIndividual.lastName
+        birthdateLabel.text = selectedIndividual.birthdate?.formatDateForUI()
+        let affiliation : Int = Int(selectedIndividual.affiliation)
+        affiliationTextLabel.text = Affiliation(rawValue:affiliation)?.string
+        hasForceLabel.text = selectedIndividual.forceSensitive ? "The Force is strong with this one" : "The Force does not reside with this one"
+    }
     
     @IBAction func didSelectDone(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
+    
+    
 }

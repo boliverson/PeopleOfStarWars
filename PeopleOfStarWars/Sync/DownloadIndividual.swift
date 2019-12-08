@@ -27,8 +27,9 @@ class DownloadIndividual: DownloadBase {
         
         if individual == nil {
             individual = Individual.init(entity: NSEntityDescription.entity(forEntityName: "Individual", in: context)!, insertInto: context)
+            individual?.id = individualId
         }
-        individual?.id = individualId
+
         individual?.firstName = item["firstName"] as? String
         individual?.lastName = item["lastName"] as? String
         let date = item["birthdate"] as? String

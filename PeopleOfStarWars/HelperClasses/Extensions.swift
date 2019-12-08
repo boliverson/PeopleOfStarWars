@@ -17,3 +17,13 @@ extension String{
         return date
     }
 }
+
+extension Date{
+    
+    func formatDateForUI() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "E, MMM d, yyyy"
+        let date = formatter.string(from: self)
+        return date
+    }
+}
