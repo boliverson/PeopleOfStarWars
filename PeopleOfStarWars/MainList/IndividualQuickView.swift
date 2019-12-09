@@ -10,9 +10,10 @@ import Foundation
 import UIKit
 import CoreData
 
-class IndividualQuickView: UITableViewCell {
+class IndividualQuickView: UITableViewCell, IndividualImageResponse {
     @IBOutlet var individualImage: UIImageView!
-    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var firstNameLabel: UILabel!
+    @IBOutlet var lastNameLabel: UILabel!
     @IBOutlet var affiliationLabel: UILabel!
     @IBOutlet var affiliationIcon: UILabel!
     
@@ -21,10 +22,11 @@ class IndividualQuickView: UITableViewCell {
         do{
             let individual = try context.existingObject(with: individualId) as! Individual
             
-            self.nameLabel.text = "\(individual.firstName ?? "Ben") \(individual.lastName ?? "Oliverson")"
-            self.affiliationLabel.text = Affiliation(rawValue: Int(individual.affiliation))?.string
+            individual.individualImageDelegate = self
             
-            self.affiliationIcon.font = UIFont(name: "FontAwesome", size: 45.0)
+            self.firstNameLabel.text = individual.firstName
+            self.lastNameLabel.text = individual.lastName
+            self.affiliationLabel.text = Affiliation(rawValue: Int(individual.affiliation))?.string
             
             switch individual.affiliation {
             case 0:
@@ -38,10 +40,41 @@ class IndividualQuickView: UITableViewCell {
             default:
                 self.affiliationIcon.text = "¯\\_(ツ)_/¯"
             }
+            
+//            self.affiliationIcon.font = UIFont(name: "FontAwesome5ProFree", size: 45.0)
+            
+            if individual.profilePictureBinary == nil && individual.profilePictureURL != nil{
+                individual.setImage(from: individual.profilePictureURL!)
+            } else {
+                setCellImage(data: individual.profilePictureBinary!)
+            }
+            
         } catch {
             print("Error trying to fetch individual")
         }
-        
-        
+    }
+    
+    func imageBinaryReceived(data: Data){
+        setCellImage(data: data)
+    }
+    
+    func setCellImage(data: Data) {
+        DispatchQueue.global().async {
+            guard var image = UIImage(data: data, scale: 50.0) else {return}
+            let aspectHeight = 130 / image.size.height
+            let aspectWidth = 130 / image.size.width
+            image = self.resizedImage(image: image, size: CGSize(width: image.size.width * aspectWidth, height: image.size.height * aspectHeight))!
+            DispatchQueue.main.async {
+                self.individualImage.image = image
+            }
+        }
+    }
+    
+    func resizedImage(image: UIImage, size: CGSize) -> UIImage? {
+
+        let renderer = UIGraphicsImageRenderer(size: size)
+        return renderer.image { (context) in
+            image.draw(in: CGRect(origin: .zero, size: size))
+        }
     }
 }

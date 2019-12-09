@@ -5,6 +5,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>fa-regular-400.ttf</string>
+		<string>FontAwesome.otf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>

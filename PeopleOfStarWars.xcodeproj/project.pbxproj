@@ -27,6 +27,8 @@
 		9A561E00239CAD0C00F6623D /* EntityInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A561DFF239CAD0C00F6623D /* EntityInteractor.swift */; };
 		9A561E02239CB48C00F6623D /* ConstantValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A561E01239CB48C00F6623D /* ConstantValues.swift */; };
 		9A561E04239CC18E00F6623D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A561E03239CC18E00F6623D /* Extensions.swift */; };
+		9A561E06239DF5A800F6623D /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A561E05239DF5A800F6623D /* Protocols.swift */; };
+		9AA87666239E26B900B2FC51 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AA87665239E26B900B2FC51 /* FontAwesome.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		9A561DFF239CAD0C00F6623D /* EntityInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityInteractor.swift; sourceTree = "<group>"; };
 		9A561E01239CB48C00F6623D /* ConstantValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantValues.swift; sourceTree = "<group>"; };
 		9A561E03239CC18E00F6623D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9A561E05239DF5A800F6623D /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		9AA87665239E26B900B2FC51 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				9A135EF9239C1FDC00B137CE /* fa-regular-400.ttf */,
+				9AA87665239E26B900B2FC51 /* FontAwesome.otf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 				9A561DFF239CAD0C00F6623D /* EntityInteractor.swift */,
 				9A561E01239CB48C00F6623D /* ConstantValues.swift */,
 				9A561E03239CC18E00F6623D /* Extensions.swift */,
+				9A561E05239DF5A800F6623D /* Protocols.swift */,
 			);
 			path = HelperClasses;
 			sourceTree = "<group>";
@@ -317,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A135ECA239C114000B137CE /* LaunchScreen.storyboard in Resources */,
+				9AA87666239E26B900B2FC51 /* FontAwesome.otf in Resources */,
 				9A135EFA239C1FDC00B137CE /* fa-regular-400.ttf in Resources */,
 				9A135EEF239C162000B137CE /* IndividualQuickView.xib in Resources */,
 				9A135EC7239C114000B137CE /* Assets.xcassets in Resources */,
@@ -354,6 +361,7 @@
 				9A135EC5239C113F00B137CE /* PeopleOfStarWars.xcdatamodeld in Sources */,
 				9A561DF8239C44B200F6623D /* IndividualDetail.swift in Sources */,
 				9A561E04239CC18E00F6623D /* Extensions.swift in Sources */,
+				9A561E06239DF5A800F6623D /* Protocols.swift in Sources */,
 				9A135EBD239C113F00B137CE /* SceneDelegate.swift in Sources */,
 				9A561DFB239C501D00F6623D /* DownloadBase.swift in Sources */,
 				9A561E00239CAD0C00F6623D /* EntityInteractor.swift in Sources */,

@@ -5,69 +5,131 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="fontawesome-webfont.ttf">
-            <string>FontAwesome</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="IndividualQuickView" rowHeight="165" id="gEi-uO-3Oc" customClass="IndividualQuickView" customModule="PeopleOfStarWars" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="637" height="185"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="IndividualQuickView" rowHeight="165" id="gEi-uO-3Oc" customClass="IndividualQuickView" customModule="PeopleOfStarWars" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="630" height="180"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gEi-uO-3Oc" id="TOg-hB-PUu">
-                <rect key="frame" x="0.0" y="0.0" width="606" height="185"/>
+                <rect key="frame" x="0.0" y="0.0" width="630" height="180"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1H6-tT-En7">
-                        <rect key="frame" x="20" y="17" width="150" height="150"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVm-2G-GLp">
-                        <rect key="frame" x="211" y="25" width="348" height="40"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ort-gx-ArI">
-                        <rect key="frame" x="267" y="107" width="226" height="26"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Affiliation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZL-zc-o87">
-                        <rect key="frame" x="267" y="136" width="90" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAk-dD-wMH">
-                        <rect key="frame" x="207" y="107" width="52" height="51"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="17"/>
-                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myI-ME-74Q">
-                        <rect key="frame" x="211" y="67" width="80" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAK-BW-J7w">
+                        <rect key="frame" x="15" y="15" width="600" height="150"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1H6-tT-En7">
+                                <rect key="frame" x="10" y="10" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="ff8-sG-yfb"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JVm-2G-GLp">
+                                <rect key="frame" x="145" y="15" width="434" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4FB-7i-a2E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAk-dD-wMH">
+                                <rect key="frame" x="145" y="84" width="52" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="iM6-de-B0m"/>
+                                    <constraint firstAttribute="height" constant="51" id="tWu-an-7gG"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="40" name="FontAwesome"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ort-gx-ArI">
+                                <rect key="frame" x="202" y="97" width="377" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="O6T-et-WeX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myI-ME-74Q">
+                                <rect key="frame" x="165" y="49" width="414" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Vd0-OB-mgq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="myI-ME-74Q" firstAttribute="leading" secondItem="1H6-tT-En7" secondAttribute="trailing" constant="25" id="5mg-MG-pDq"/>
+                            <constraint firstAttribute="trailing" secondItem="JVm-2G-GLp" secondAttribute="trailing" constant="21" id="8Kv-ua-TqN"/>
+                            <constraint firstItem="dAk-dD-wMH" firstAttribute="leading" secondItem="1H6-tT-En7" secondAttribute="trailing" constant="5" id="R8a-WJ-b9X"/>
+                            <constraint firstAttribute="trailing" secondItem="myI-ME-74Q" secondAttribute="trailing" constant="21" id="UaU-o1-csR"/>
+                            <constraint firstItem="JVm-2G-GLp" firstAttribute="leading" secondItem="1H6-tT-En7" secondAttribute="trailing" constant="5" id="UrM-RT-20t"/>
+                            <constraint firstItem="1H6-tT-En7" firstAttribute="leading" secondItem="vAK-BW-J7w" secondAttribute="leading" constant="10" id="X3h-8r-lp3"/>
+                            <constraint firstItem="ort-gx-ArI" firstAttribute="top" secondItem="myI-ME-74Q" secondAttribute="bottom" constant="8" id="b50-Wf-Cqg"/>
+                            <constraint firstAttribute="bottom" secondItem="1H6-tT-En7" secondAttribute="bottom" constant="10" id="dos-En-l4K"/>
+                            <constraint firstItem="JVm-2G-GLp" firstAttribute="top" secondItem="vAK-BW-J7w" secondAttribute="top" constant="15" id="mpn-2a-0ld"/>
+                            <constraint firstItem="myI-ME-74Q" firstAttribute="top" secondItem="vAK-BW-J7w" secondAttribute="top" constant="49" id="oVd-Kp-3Fw"/>
+                            <constraint firstItem="1H6-tT-En7" firstAttribute="top" secondItem="vAK-BW-J7w" secondAttribute="top" constant="10" id="ofd-Hp-fyr"/>
+                            <constraint firstItem="ort-gx-ArI" firstAttribute="leading" secondItem="dAk-dD-wMH" secondAttribute="trailing" constant="5" id="ozd-Fl-yPi"/>
+                            <constraint firstItem="dAk-dD-wMH" firstAttribute="top" secondItem="JVm-2G-GLp" secondAttribute="bottom" constant="29" id="s6j-y8-JCM"/>
+                            <constraint firstAttribute="trailing" secondItem="ort-gx-ArI" secondAttribute="trailing" constant="21" id="xIo-Cx-5L6"/>
+                            <constraint firstAttribute="bottom" secondItem="dAk-dD-wMH" secondAttribute="bottom" constant="15" id="xdo-ZV-r00"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="20" height="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="vAK-BW-J7w" secondAttribute="bottom" constant="15" id="13v-4W-Fl7"/>
+                    <constraint firstItem="vAK-BW-J7w" firstAttribute="leading" secondItem="TOg-hB-PUu" secondAttribute="leading" constant="15" id="5vN-Un-nMl"/>
+                    <constraint firstAttribute="trailing" secondItem="vAK-BW-J7w" secondAttribute="trailing" constant="15" id="Bq7-gv-0Jv"/>
+                    <constraint firstItem="vAK-BW-J7w" firstAttribute="top" secondItem="TOg-hB-PUu" secondAttribute="top" constant="15" id="Xxm-0u-l8a"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="affiliationIcon" destination="dAk-dD-wMH" id="sc9-n1-yZd"/>
                 <outlet property="affiliationLabel" destination="ort-gx-ArI" id="asb-fI-2JK"/>
+                <outlet property="firstNameLabel" destination="JVm-2G-GLp" id="7lI-YB-iLg"/>
                 <outlet property="individualImage" destination="1H6-tT-En7" id="uNj-PX-Szq"/>
-                <outlet property="nameLabel" destination="JVm-2G-GLp" id="O8b-69-NHq"/>
+                <outlet property="lastNameLabel" destination="myI-ME-74Q" id="b0u-Nb-n6Q"/>
             </connections>
-            <point key="canvasLocation" x="90.579710144927546" y="52.566964285714285"/>
+            <point key="canvasLocation" x="89.855072463768124" y="52.232142857142854"/>
         </tableViewCell>
     </objects>
 </document>

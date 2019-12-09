@@ -33,7 +33,8 @@ class IndividualDetail: UIViewController {
         birthdateLabel.text = selectedIndividual.birthdate?.formatDateForUI()
         let affiliation : Int = Int(selectedIndividual.affiliation)
         affiliationTextLabel.text = Affiliation(rawValue:affiliation)?.string
-        hasForceLabel.text = selectedIndividual.forceSensitive ? "The Force is strong with this one" : "The Force does not reside with this one"
+        hasForceLabel.text = selectedIndividual.forceSensitive ? "The Force is strong with this one" : "The Force does not reside here"
+        individualImage.image = UIImage(data: selectedIndividual.profilePictureBinary!)
     }
     
     @IBAction func didSelectDone(_ sender: Any) {

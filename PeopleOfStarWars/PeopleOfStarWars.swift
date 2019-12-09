@@ -42,6 +42,7 @@ class PeopleOfStarWars: UIViewController, UITableViewDelegate, UITableViewDataSo
         
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: IndividualQuickView.self), for: indexPath) as! IndividualQuickView
         cell.setUpCell(individualId: peopleOfStarWars[indexPath.row].objectID)
+        cell.selectionStyle = .none
         return cell
         
     }
