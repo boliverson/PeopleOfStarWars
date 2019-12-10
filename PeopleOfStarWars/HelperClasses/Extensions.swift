@@ -106,3 +106,54 @@ extension UIView {
         }
     }
 }
+
+extension UIViewController{
+    
+    func startActivityIndicator(blur: UIVisualEffectView, ai: UIActivityIndicatorView) -> Void {
+        blur.frame = view.bounds
+        blur.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        ai.center = blur.center
+        ai.alpha = 0.0
+        blur.alpha = 0.0
+        view.addSubview(blur)
+        view.addSubview(ai)
+        
+        ai.startAnimating()
+        UIView.animate(withDuration: 0.3) {
+            blur.alpha = 1.0
+            ai.alpha = 1.0
+        }
+    }
+    
+    func stopActivityIndicator(blur: UIVisualEffectView, ai: UIActivityIndicatorView) -> Void{
+        UIView.animate(withDuration: 0.25, animations: {
+            blur.alpha = 0.0
+            ai.alpha = 0.0
+        }, completion: { finished in
+            ai.stopAnimating()
+            blur.removeFromSuperview()
+            ai.removeFromSuperview()
+        })
+    }
+}
+
+extension UITableViewCell{
+    
+    func startActivityIndicator(ai: UIActivityIndicatorView) -> Void {
+        ai.alpha = 0.0
+        ai.startAnimating()
+        UIView.animate(withDuration: 0.3) {
+            ai.alpha = 1.0
+        }
+    }
+    
+    func stopActivityIndicator(ai: UIActivityIndicatorView) -> Void{
+        UIView.animate(withDuration: 0.25, animations: {
+            ai.alpha = 0.0
+        }, completion: { finished in
+            ai.stopAnimating()
+            ai.removeFromSuperview()
+        })
+    }
+}

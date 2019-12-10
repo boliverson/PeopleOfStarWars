@@ -16,6 +16,7 @@ class IndividualQuickView: UITableViewCell, IndividualImageResponse {
     @IBOutlet var lastNameLabel: UILabel!
     @IBOutlet var affiliationLabel: UILabel!
     @IBOutlet var affiliationIcon: UILabel!
+    @IBOutlet var activityindicator: UIActivityIndicatorView!
     
     func setUpCell(individualId: NSManagedObjectID){
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -44,6 +45,7 @@ class IndividualQuickView: UITableViewCell, IndividualImageResponse {
 //            self.affiliationIcon.font = UIFont(name: "FontAwesome5ProFree", size: 45.0)
             
             if individual.profilePictureBinary == nil && individual.profilePictureURL != nil{
+                self.startActivityIndicator(ai: activityindicator)
                 individual.setImage(from: individual.profilePictureURL!)
             } else {
                 setCellImage(data: individual.profilePictureBinary!)
@@ -65,6 +67,7 @@ class IndividualQuickView: UITableViewCell, IndividualImageResponse {
             let aspectWidth = 130 / image.size.width
             image = self.resizedImage(image: image, size: CGSize(width: image.size.width * aspectWidth, height: image.size.height * aspectHeight))!
             DispatchQueue.main.async {
+                self.stopActivityIndicator(ai: self.activityindicator)
                 self.individualImage.image = image
             }
         }

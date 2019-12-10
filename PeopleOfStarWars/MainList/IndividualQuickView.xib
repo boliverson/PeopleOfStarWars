@@ -18,6 +18,10 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAK-BW-J7w">
                         <rect key="frame" x="15" y="15" width="600" height="150"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="faG-qv-uh1">
+                                <rect key="frame" x="10" y="10" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1H6-tT-En7">
                                 <rect key="frame" x="10" y="10" width="130" height="130"/>
                                 <constraints>
@@ -79,6 +83,7 @@
                         <constraints>
                             <constraint firstItem="myI-ME-74Q" firstAttribute="leading" secondItem="1H6-tT-En7" secondAttribute="trailing" constant="25" id="5mg-MG-pDq"/>
                             <constraint firstAttribute="trailing" secondItem="JVm-2G-GLp" secondAttribute="trailing" constant="21" id="8Kv-ua-TqN"/>
+                            <constraint firstItem="JVm-2G-GLp" firstAttribute="leading" secondItem="faG-qv-uh1" secondAttribute="trailing" constant="5" id="K8M-zU-lBQ"/>
                             <constraint firstItem="dAk-dD-wMH" firstAttribute="leading" secondItem="1H6-tT-En7" secondAttribute="trailing" constant="5" id="R8a-WJ-b9X"/>
                             <constraint firstAttribute="trailing" secondItem="myI-ME-74Q" secondAttribute="trailing" constant="21" id="UaU-o1-csR"/>
                             <constraint firstItem="JVm-2G-GLp" firstAttribute="leading" secondItem="1H6-tT-En7" secondAttribute="trailing" constant="5" id="UrM-RT-20t"/>
@@ -123,6 +128,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="activityindicator" destination="faG-qv-uh1" id="DNQ-uY-bs4"/>
                 <outlet property="affiliationIcon" destination="dAk-dD-wMH" id="sc9-n1-yZd"/>
                 <outlet property="affiliationLabel" destination="ort-gx-ArI" id="asb-fI-2JK"/>
                 <outlet property="firstNameLabel" destination="JVm-2G-GLp" id="7lI-YB-iLg"/>

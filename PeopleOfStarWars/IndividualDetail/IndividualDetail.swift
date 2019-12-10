@@ -11,7 +11,7 @@ import UIKit
 
 class IndividualDetail: UIViewController {
     
-    @IBOutlet var navigationBar: UINavigationItem!
+    @IBOutlet var navBar: UINavigationBar!
     @IBOutlet var affiliationIconLabel: UILabel!
     @IBOutlet var individualImage: UIImageView!
     @IBOutlet var firstNameLabel: UILabel!
@@ -28,6 +28,7 @@ class IndividualDetail: UIViewController {
     }
     
     func setUpUI() {
+//        navBar = "\(selectedIndividual.firstName ?? "Ben's")'s Bio"
         firstNameLabel.text = selectedIndividual.firstName
         lastNameLabel.text = selectedIndividual.lastName
         birthdateLabel.text = selectedIndividual.birthdate?.formatDateForUI()

@@ -11,3 +11,7 @@ import Foundation
 protocol IndividualImageResponse {
     func imageBinaryReceived(data: Data)
 }
+
+protocol IndividualDownloadComplete {
+    func loadUI()
+}

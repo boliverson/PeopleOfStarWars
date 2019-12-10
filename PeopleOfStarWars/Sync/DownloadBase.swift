@@ -9,6 +9,7 @@
 import Foundation
 
 class DownloadBase: NSObject {
+    var individualDownloadDelegate: IndividualDownloadComplete?
     let session = URLSession.shared
     
     func url() -> String? {
@@ -49,6 +50,9 @@ class DownloadBase: NSObject {
                 let objects = json["\(jsonKey)"] as! [Dictionary<String,Any>]
                 for item in objects{
                     self.saveData(item: item)
+                }
+                if self.individualDownloadDelegate != nil{
+                    self.individualDownloadDelegate?.loadUI()
                 }
             } catch {
                 print("JSON error: \(error.localizedDescription)")

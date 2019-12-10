@@ -8,23 +8,44 @@
 
 import UIKit
 
-class PeopleOfStarWars: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class PeopleOfStarWars: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, IndividualDownloadComplete {
     
     @IBOutlet var tableview: UITableView!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var searchBar: UISearchBar!
     var peopleOfStarWars = [Individual]()
     
     let downloadIndividuals = DownloadIndividual()
+    let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
+    var blurEffectView: UIVisualEffectView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        downloadIndividuals.downloadAction()
+        blurEffectView = UIVisualEffectView(effect: blurEffect)
+        startActivityIndicator(blur: blurEffectView, ai: activityIndicator)
         
         tableview.register(UINib(nibName: String(describing: IndividualQuickView.self), bundle: nil), forCellReuseIdentifier: String(describing: IndividualQuickView.self))
         tableview.delegate = self
         tableview.dataSource = self
         
-        peopleOfStarWars = EntityInteractor.getEntityWithPredicate(entityName: String(describing: Individual.self), predicate: "firstName.length > 0") as! [Individual]
+        DispatchQueue.global().async {
+            self.downloadIndividuals.individualDownloadDelegate = self
+            self.downloadIndividuals.downloadAction()
+        }
+    }
+    
+    func loadUI() {
+        DispatchQueue.main.async {
+            let count: Int = (self.searchBar.text?.count) ?? 0
+            let searchText = self.searchBar.text ?? ""
+            if count > 0 {
+                self.peopleOfStarWars = EntityInteractor.getEntityWithPredicate(entityName: String(describing: Individual.self), predicate: String(format: "firstName CONTAINS[c] %@ OR lastName CONTAINS[c] %@", searchText, searchText)) as! [Individual]
+            }else {
+               self.peopleOfStarWars = EntityInteractor.getEntityWithPredicate(entityName: String(describing: Individual.self), predicate: "firstName.length > 0") as! [Individual]
+            }
+            self.tableview.reloadData()
+            self.stopActivityIndicator(blur: self.blurEffectView, ai: self.activityIndicator)
+        }
     }
 
     @IBAction func didSelectSort(_ sender: Any) {
@@ -54,6 +75,14 @@ class PeopleOfStarWars: UIViewController, UITableViewDelegate, UITableViewDataSo
         controller.selectedIndividual = peopleOfStarWars[indexPath.row]
         
         self.present(controller, animated: true, completion: nil)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.loadUI()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
     
 }
