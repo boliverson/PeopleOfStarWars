@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:PeopleOfStarWars.xcodeproj">
+      location = "group:fa-regular-400.ttf">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

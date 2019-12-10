@@ -29,21 +29,22 @@ class IndividualQuickView: UITableViewCell, IndividualImageResponse {
             self.lastNameLabel.text = individual.lastName
             self.affiliationLabel.text = Affiliation(rawValue: Int(individual.affiliation))?.string
             
-            switch individual.affiliation {
-            case 0:
-                self.affiliationIcon.text = "" //Rebelion
-            case 1:
-                self.affiliationIcon.text = "" //First Order
-            case 2:
-                self.affiliationIcon.text = "" //Jedi
-            case 3:
-                self.affiliationIcon.text = "" //Sith
-            default:
-                self.affiliationIcon.text = "¯\\_(ツ)_/¯"
-            }
+            //I was trying to add a Font Awesome icon here, but for some reason the font was not being recognized
+            //self.affiliationIcon.font = UIFont(name: "FontAwesome5Pro-Regular", size: 40.0)
             
-//            self.affiliationIcon.font = UIFont(name: "FontAwesome5ProFree", size: 45.0)
-            
+//            switch individual.affiliation {
+//            case 0:
+//                self.affiliationIcon.text = "\u{f1d0}" //Rebelion
+//            case 1:
+//                self.affiliationIcon.text = "" //First Order
+//            case 2:
+//                self.affiliationIcon.text = "" //Jedi
+//            case 3:
+//                self.affiliationIcon.text = "" //Sith
+//            default:
+//                self.affiliationIcon.text = "¯\\_(ツ)_/¯"
+//            }
+                   
             if individual.profilePictureBinary == nil && individual.profilePictureURL != nil{
                 self.startActivityIndicator(ai: activityindicator)
                 individual.setImage(from: individual.profilePictureURL!)

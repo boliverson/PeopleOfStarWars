@@ -20,7 +20,6 @@
 		9A135EF2239C1B1700B137CE /* IndividualQuickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A135EF1239C1B1700B137CE /* IndividualQuickView.swift */; };
 		9A135EF6239C1E4500B137CE /* Individual+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A135EF4239C1E4500B137CE /* Individual+CoreDataClass.swift */; };
 		9A135EF7239C1E4500B137CE /* Individual+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A135EF5239C1E4500B137CE /* Individual+CoreDataProperties.swift */; };
-		9A135EFA239C1FDC00B137CE /* fa-regular-400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A135EF9239C1FDC00B137CE /* fa-regular-400.ttf */; };
 		9A561DF8239C44B200F6623D /* IndividualDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A561DF7239C44B200F6623D /* IndividualDetail.swift */; };
 		9A561DFB239C501D00F6623D /* DownloadBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A561DFA239C501D00F6623D /* DownloadBase.swift */; };
 		9A561DFD239C509400F6623D /* DownloadIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A561DFC239C509400F6623D /* DownloadIndividual.swift */; };
@@ -28,7 +27,9 @@
 		9A561E02239CB48C00F6623D /* ConstantValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A561E01239CB48C00F6623D /* ConstantValues.swift */; };
 		9A561E04239CC18E00F6623D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A561E03239CC18E00F6623D /* Extensions.swift */; };
 		9A561E06239DF5A800F6623D /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A561E05239DF5A800F6623D /* Protocols.swift */; };
-		9AA87666239E26B900B2FC51 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AA87665239E26B900B2FC51 /* FontAwesome.otf */; };
+		9A5C1B3323A00AE7009C30A8 /* Font Awesome 5 Pro-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9A5C1B3223A00AE7009C30A8 /* Font Awesome 5 Pro-Regular-400.otf */; };
+		9A903C7B23A00A0100FD9581 /* Font Awesome 5 Free-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9A903C7A23A00A0100FD9581 /* Font Awesome 5 Free-Regular-400.otf */; };
+		9ABACCEC239FFE1B0089E670 /* fa-regular-400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9ABACCEB239FFE1B0089E670 /* fa-regular-400.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +69,6 @@
 		9A135EF1239C1B1700B137CE /* IndividualQuickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualQuickView.swift; sourceTree = "<group>"; };
 		9A135EF4239C1E4500B137CE /* Individual+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Individual+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9A135EF5239C1E4500B137CE /* Individual+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Individual+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		9A135EF9239C1FDC00B137CE /* fa-regular-400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-regular-400.ttf"; sourceTree = "<group>"; };
 		9A561DF7239C44B200F6623D /* IndividualDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualDetail.swift; sourceTree = "<group>"; };
 		9A561DFA239C501D00F6623D /* DownloadBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadBase.swift; sourceTree = "<group>"; };
 		9A561DFC239C509400F6623D /* DownloadIndividual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadIndividual.swift; sourceTree = "<group>"; };
@@ -76,7 +76,9 @@
 		9A561E01239CB48C00F6623D /* ConstantValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantValues.swift; sourceTree = "<group>"; };
 		9A561E03239CC18E00F6623D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9A561E05239DF5A800F6623D /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-		9AA87665239E26B900B2FC51 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
+		9A5C1B3223A00AE7009C30A8 /* Font Awesome 5 Pro-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Pro-Regular-400.otf"; sourceTree = "<group>"; };
+		9A903C7A23A00A0100FD9581 /* Font Awesome 5 Free-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Regular-400.otf"; sourceTree = "<group>"; };
+		9ABACCEB239FFE1B0089E670 /* fa-regular-400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-regular-400.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,8 +186,9 @@
 		9A135EF8239C1FB800B137CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9A135EF9239C1FDC00B137CE /* fa-regular-400.ttf */,
-				9AA87665239E26B900B2FC51 /* FontAwesome.otf */,
+				9ABACCEB239FFE1B0089E670 /* fa-regular-400.ttf */,
+				9A903C7A23A00A0100FD9581 /* Font Awesome 5 Free-Regular-400.otf */,
+				9A5C1B3223A00AE7009C30A8 /* Font Awesome 5 Pro-Regular-400.otf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -323,8 +326,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A135ECA239C114000B137CE /* LaunchScreen.storyboard in Resources */,
-				9AA87666239E26B900B2FC51 /* FontAwesome.otf in Resources */,
-				9A135EFA239C1FDC00B137CE /* fa-regular-400.ttf in Resources */,
+				9A903C7B23A00A0100FD9581 /* Font Awesome 5 Free-Regular-400.otf in Resources */,
+				9A5C1B3323A00AE7009C30A8 /* Font Awesome 5 Pro-Regular-400.otf in Resources */,
+				9ABACCEC239FFE1B0089E670 /* fa-regular-400.ttf in Resources */,
 				9A135EEF239C162000B137CE /* IndividualQuickView.xib in Resources */,
 				9A135EC7239C114000B137CE /* Assets.xcassets in Resources */,
 				9A135EC2239C113F00B137CE /* Main.storyboard in Resources */,

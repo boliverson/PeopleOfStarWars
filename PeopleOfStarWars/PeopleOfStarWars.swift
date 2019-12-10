@@ -39,7 +39,7 @@ class PeopleOfStarWars: UIViewController, UITableViewDelegate, UITableViewDataSo
             let count: Int = (self.searchBar.text?.count) ?? 0
             let searchText = self.searchBar.text ?? ""
             if count > 0 {
-                self.peopleOfStarWars = EntityInteractor.getEntityWithPredicate(entityName: String(describing: Individual.self), predicate: String(format: "firstName CONTAINS[c] %@ OR lastName CONTAINS[c] %@", searchText, searchText)) as! [Individual]
+                self.peopleOfStarWars = EntityInteractor.getEntityWithPredicate(entityName: String(describing: Individual.self), predicate: String(format: "firstName CONTAINS[c] '%@' OR lastName CONTAINS[c] '%@'", searchText, searchText)) as! [Individual]
             }else {
                self.peopleOfStarWars = EntityInteractor.getEntityWithPredicate(entityName: String(describing: Individual.self), predicate: "firstName.length > 0") as! [Individual]
             }
